@@ -4,7 +4,7 @@ This project provides a Python-based module to automate the scanning of Docker i
 
 ---
 
-## 🔍 Features
+##  Features
 
 - Scans Docker images for security vulnerabilities using **Trivy**
 - Detects CRITICAL CVEs in local file system (OSS dependencies)
@@ -14,7 +14,7 @@ This project provides a Python-based module to automate the scanning of Docker i
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 docker_cve_scanner/
@@ -33,7 +33,7 @@ docker_cve_scanner/
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 - Python 3.x
 - [Trivy](https://github.com/aquasecurity/trivy)
@@ -51,7 +51,7 @@ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/inst
 
 ---
 
-## 🚀 How to Use
+##  How to Use
 
 ### 1. Update `run_scan.py`
 
@@ -76,7 +76,7 @@ python run_scan.py
 
 ---
 
-## 🧪 Jenkins Integration
+##  Jenkins Integration
 
 The provided `Jenkinsfile` installs Trivy, sets up the Python environment, and runs the scan:
 
@@ -108,7 +108,7 @@ pipeline {
 
 ---
 
-## 🎯 Purpose
+##  Purpose
 
 This module is built for CI/CD pipelines to:
 - Automate detection of CRITICAL vulnerabilities
@@ -117,14 +117,14 @@ This module is built for CI/CD pipelines to:
 
 ---
 
-## 📌 Notes
+##  Notes
 
 - The HTML reports are designed to be viewed in a browser or stored as Jenkins build artifacts.
 - Only CRITICAL severity issues are considered for focused remediation.
 
 ---
 
-## ✅ Status
+##  Status
 
 - [x] Docker scan via Trivy
 - [x] OSS dependency scan via Trivy filesystem scan
