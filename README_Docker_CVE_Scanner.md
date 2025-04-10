@@ -86,7 +86,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/your-org/your-repo.git'
+                git 'https://github.com/Venkatanaveenkumar14/docker_cve_scanner_jenkins_files.git'
             }
         }
 
