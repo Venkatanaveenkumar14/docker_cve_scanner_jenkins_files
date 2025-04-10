@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/your-org/your-repo.git'
+            }
+        }
+
+        stage('Install Trivy') {
+            steps {
+                sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin'
+            }
+        }
+
+        stage('Run Security Scan') {
+            steps {
+                sh 'python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt'
+                sh 'python run_scan.py'
+            }
+        }
+    }
+}

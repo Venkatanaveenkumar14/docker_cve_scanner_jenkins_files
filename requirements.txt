@@ -1,0 +1,6 @@
+requests
+python-dotenv
+flask==2.0.3
+requests==2.27.1
+django==3.2.10
+pyyaml==6.0
